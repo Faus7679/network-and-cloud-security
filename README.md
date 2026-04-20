@@ -27,19 +27,53 @@ pip install -r requirements.txt
 
 ## Usage
 
-```text
-python network_scanner.py -t <target> [options]
+### Example of execution steps and Commands 
 
-Options:
-  -t, --target TARGET   IP address, hostname, or CIDR range (required)
-  -p, --ports PORTS     Port range or comma-separated list (default: 1-1024)
-  --arp                 ARP host discovery before scanning (root + Scapy)
-  --no-service          Disable service/version detection (faster)
-  --os                  Enable OS detection (requires root)
-  --vuln                Run nmap vulnerability scripts (slow but thorough)
-  --output FILE         Save text report to FILE
-  --json FILE           Save JSON results to FILE
-```
+## My local IP 192.168.56.1
+
+##Basic scan of a single host (ports 1–1024):
+
+python network_scanner.py -t 192.168.1.1
+python network_scanner.py -t 192.168.56.1
+============================================
+##Scan specific ports:
+
+python network_scanner.py -t 192.168.1.1 -p 22,80,443,3389
+
+python network_scanner.py -t 192.168.56.1 -p 22,135,139,445
+========================================================
+##Scan a subnet with ARP discovery:
+
+python network_scanner.py -t 192.168.1.0/24 --arp
+==============================================================
+##Full scan — OS detection + vuln scripts + save output:
+
+python network_scanner.py -t 192.168.1.1 --os --vuln --output report.txt --json results.json
+===============================================
+##Fast scan (no service detection) on a wider port range:
+
+python network_scanner.py -t 192.168.1.1 -p 1-65535 --no-service
+
+==================================================================================
+Arguments
+Argument	Description
+
+-t TARGET	(Required) IP address, hostname, or CIDR range
+
+-p PORTS	Port range or comma-separated list (default: 1-1024)
+
+--arp	ARP host discovery before scanning (needs Scapy + admin)
+
+--no-service	Skip service/version detection (faster)
+
+--os	Enable OS detection (needs admin/root)
+
+--vuln	Run nmap vuln scripts (slow but thorough)
+
+--output FILE	Save text report to a file
+
+--json FILE	Save results as JSON to a file
+
 
 ### Examples
 
