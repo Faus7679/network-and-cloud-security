@@ -1,0 +1,38 @@
+{
+  "hosts": [
+    {
+      "ip": "192.168.56.1",
+      "hostname": "",
+      "state": "up",
+      "mac": "",
+      "os": "Microsoft Windows 11 24H2 - 25H2 (100%)",
+      "ports": [
+        {
+          "port": 135,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "msrpc",
+          "version": "Microsoft Windows RPC",
+          "vulnerabilities": []
+        },
+        {
+          "port": 139,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "netbios-ssn",
+          "version": "Microsoft Windows netbios-ssn",
+          "vulnerabilities": []
+        },
+        {
+          "port": 445,
+          "protocol": "tcp",
+          "state": "open",
+          "service": "microsoft-ds",
+          "version": "",
+          "vulnerabilities": []
+        }
+      ],
+      "script_output": {}
+    }
+  ]
+}

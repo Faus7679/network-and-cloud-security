@@ -49,6 +49,7 @@ python network_scanner.py -t 192.168.1.0/24 --arp
 ##Full scan — OS detection + vuln scripts + save output:
 
 python network_scanner.py -t 192.168.1.1 --os --vuln --output report.txt --json results.json
+python network_scanner.py -t 192.168.56.1 --os --vuln --output report.txt --json results.json
 ===============================================
 ##Fast scan (no service detection) on a wider port range:
 

@@ -1,0 +1,16 @@
+============================================================
+  NETWORK SCANNER REPORT
+  Generated: 2026-04-20 15:46:10
+============================================================
+
+Host: 192.168.56.1
+  State       : up
+  OS Guess    : Microsoft Windows 11 24H2 - 25H2 (100%)
+  Open Ports  : 3 found
+  PORT       STATE      SERVICE              VERSION
+  --------------------------------------------------------
+  135/tcp    open       msrpc                Microsoft Windows RPC
+  139/tcp    open       netbios-ssn          Microsoft Windows netbios-ssn
+  445/tcp    open       microsoft-ds         
+
+============================================================
